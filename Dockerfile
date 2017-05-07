@@ -8,4 +8,6 @@ COPY . .
 RUN dotnet restore \
   && dotnet publish -o /out
 
+EXPOSE 80
+
 ENTRYPOINT [ "dotnet", "/out/helloaspnetcore.dll" ]
