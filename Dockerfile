@@ -5,9 +5,10 @@ WORKDIR /app
 
 COPY . .
 
-RUN dotnet restore \
+RUN chmod +x init_script.sh \
+  && dotnet restore \
   && dotnet publish -o /out
 
 EXPOSE 80
 
-ENTRYPOINT [ "dotnet", "/out/helloaspnetcore.dll" ]
+CMD [ "/app/init_script.sh" ]
