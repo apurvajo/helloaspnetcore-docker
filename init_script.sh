@@ -1,5 +1,7 @@
 #!/bin/bash
 
+service ssh start
+
 DIR=/out
 DLL=`ls -1 *.csproj | head -1 | sed -e 's/\.csproj$/.dll/'`
 
