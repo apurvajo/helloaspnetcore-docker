@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
@@ -30,7 +31,12 @@ namespace helloaspnetcore
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Hello World!");
+                var message = "Hello World!";
+                if (File.Exists("message.txt"))
+                {
+                    message = File.ReadAllText("message.txt");
+                }
+                await context.Response.WriteAsync(message);
             });
         }
     }
