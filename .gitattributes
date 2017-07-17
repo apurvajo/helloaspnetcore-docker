@@ -1,1 +1,2 @@
 init_script.sh eol=lf
+sshd_config eol=lf
