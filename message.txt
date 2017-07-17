@@ -1,1 +1,1 @@
-Hello ASP.Net Core MSREADY BACKUP!
+Hello ASP.Net Core!
