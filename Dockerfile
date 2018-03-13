@@ -1,5 +1,5 @@
 FROM microsoft/aspnetcore-build:1.1
-MAINTAINER mikono@microsoft.com
+MAINTAINER apurvajo@microsoft.com
 
 WORKDIR /app
 
